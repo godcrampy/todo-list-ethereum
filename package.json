@@ -1,0 +1,20 @@
+{
+  "name": "todo-list-ethereum",
+  "version": "1.0.0",
+  "description": "Todo list on the blockchain",
+  "main": "index.js",
+  "repository": "https://github.com/godcrampy/todo-list-ethereum.git",
+  "author": "Sahil Bondre",
+  "license": "MIT",
+  "scripts": {
+    "lint": "eslint '**/*.js' --fix",
+    "pretty": "prettier '**/*.js' --write",
+    "format": "npm run lint && npm run pretty"
+  },
+  "dependencies": {},
+  "devDependencies": {
+    "eslint": "^6.7.2",
+    "eslint-plugin-react": "^7.17.0",
+    "prettier": "^1.19.1"
+  }
+}
