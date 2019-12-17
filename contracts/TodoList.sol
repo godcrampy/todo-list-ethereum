@@ -19,5 +19,6 @@ contract TodoList{
       list[index] = list[index + 1];
     }
     --numberOfTodos;
+    list[numberOfTodos] = "";
   }
 }

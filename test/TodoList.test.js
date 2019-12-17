@@ -29,9 +29,11 @@ contract("TodoList", accounts => {
       await todoList.deleteTodo(1);
 
       const todo = await todoList.list(1);
+      const deletedTodo = await todoList.list(2);
       const numberOfTodos = await todoList.numberOfTodos();
 
       assert.equal(todo, "Second", "Error in todo deletion");
+      assert.equal(deletedTodo, "", "Error in todo deletion");
       assert.equal(numberOfTodos, 2, "Number of todos not decreasing");
     });
   });
