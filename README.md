@@ -1,6 +1,6 @@
 # Todo List Ethereum
 
-A minimal todo list app running on the Ethereum Blockchin.
+A minimal todo list app running on the Ethereum Blockchain.
 
 ![Client](./docs/client.png)
 ![Ganache](./docs/ganache.png)
@@ -45,3 +45,7 @@ In root directory:
 ## Authors
 
 - **Sahil Bondre** - [godcrampy](https://github.com/godcrampy)
+
+## License
+
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details
