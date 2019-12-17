@@ -15,4 +15,6 @@ const options = {
 };
 
 const drizzle = new Drizzle(options);
+console.log(drizzle);
+
 ReactDom.render(<App drizzle={drizzle} />, document.getElementById("root"));

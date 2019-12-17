@@ -1,5 +1,7 @@
 import React from "react";
 
+import List from "./components/List";
+
 class App extends React.Component {
   state = { loading: true, drizzleState: null };
   componentDidMount() {
@@ -19,7 +21,12 @@ class App extends React.Component {
   }
   render() {
     if (this.state.loading) return "Loading Drizzle...";
-    return <div className="App">Drizzle is ready</div>;
+    console.log("drizzle state:", this.state.drizzleState);
+    return (
+      <div className="App">
+        <List drizzle={this.props.drizzle} drizzleState={this.state.drizzleState} />
+      </div>
+    );
   }
 }
 
