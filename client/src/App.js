@@ -5,6 +5,7 @@ import List from "./components/List";
 import Control from "./components/Control";
 import "bulma/bulma.sass";
 import "./App.scss";
+import img from "./assets/illustration.png";
 
 class App extends React.Component {
   render() {
@@ -20,8 +21,11 @@ class App extends React.Component {
             }
 
             return (
-              <div className="flex">
-                <List drizzle={drizzle} drizzleState={drizzleState} />
+              <div>
+                <div className="flex">
+                  <List drizzle={drizzle} drizzleState={drizzleState} />
+                  <img src={img} />
+                </div>
                 <Control drizzle={drizzle} drizzleState={drizzleState} />
               </div>
             );

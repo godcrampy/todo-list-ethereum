@@ -27,33 +27,34 @@ class Control extends React.Component {
   render() {
     return (
       <div className="Control">
-        <label>
-          <b>New Todo</b>
-          <input
-            className="input"
-            type="text"
-            value={this.state.newTodo}
-            onChange={this.handleNewTodo}
-            placeholder="Invest in ETH"
-          />
-          <button className="button is-success" onClick={this.addTodo}>
-            Add
-          </button>
-        </label>
-        <label>
-          <br />
-          <b>Delete Todo</b>
-          <input
-            className="input"
-            type="number"
-            value={this.state.deleteIndex}
-            onChange={this.handleCount}
-            placeholder="Index to Delete"
-          />
-          <button className="button is-danger" onClick={this.deleteTodo}>
-            Delete
-          </button>
-        </label>
+        <div className="flex">
+          <label>
+            <b>New Todo</b>
+            <input
+              className="input"
+              type="text"
+              value={this.state.newTodo}
+              onChange={this.handleNewTodo}
+              placeholder="Invest in ETH"
+            />
+            <button className="button is-success" onClick={this.addTodo}>
+              Add
+            </button>
+          </label>
+          <label>
+            <b>Delete Todo</b>
+            <input
+              className="input"
+              type="number"
+              value={this.state.deleteIndex}
+              onChange={this.handleCount}
+              placeholder="Index to Delete"
+            />
+            <button className="button is-danger" onClick={this.deleteTodo}>
+              Delete
+            </button>
+          </label>
+        </div>
       </div>
     );
   }
