@@ -22,12 +22,14 @@ class List extends React.Component {
       <div>
         Number of Todos: {todoListCount && todoListCount.value}
         <br />
-        Todos:
-        {this.state.keys.map((key, index) => {
-          const todo = TodoList.list[key];
-          if (todo && todo.value !== "") return <li key={index}>{todo.value}</li>;
-          return "";
-        })}
+        <b>Todos:</b>
+        <ol>
+          {this.state.keys.map((key, index) => {
+            const todo = TodoList.list[key];
+            if (todo && todo.value !== "") return <li key={index}>{todo.value}</li>;
+            return "";
+          })}
+        </ol>
       </div>
     );
   }

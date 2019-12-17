@@ -2,6 +2,7 @@ import React from "react";
 import { DrizzleContext } from "drizzle-react";
 
 import List from "./components/List";
+import Control from "./components/Control";
 import "bulma/bulma.sass";
 import "./App.scss";
 
@@ -18,7 +19,12 @@ class App extends React.Component {
               return "Loading...";
             }
 
-            return <List drizzle={drizzle} drizzleState={drizzleState} />;
+            return (
+              <div className="flex">
+                <List drizzle={drizzle} drizzleState={drizzleState} />
+                <Control drizzle={drizzle} drizzleState={drizzleState} />
+              </div>
+            );
           }}
         </DrizzleContext.Consumer>
       </div>
