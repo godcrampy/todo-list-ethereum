@@ -1,6 +1,7 @@
 import React from "react";
 import ReactDom from "react-dom";
-import { Drizzle } from "drizzle";
+import { Drizzle, generateStore } from "drizzle";
+import { DrizzleContext } from "drizzle-react";
 import TodoList from "./contracts/TodoList.json";
 
 import App from "./App";
@@ -14,7 +15,12 @@ const options = {
   }
 };
 
-const drizzle = new Drizzle(options);
-console.log(drizzle);
+const drizzleStore = generateStore(options);
+const drizzle = new Drizzle(options, drizzleStore);
 
-ReactDom.render(<App drizzle={drizzle} />, document.getElementById("root"));
+ReactDom.render(
+  <DrizzleContext.Provider drizzle={drizzle}>
+    <App />
+  </DrizzleContext.Provider>,
+  document.getElementById("root")
+);
