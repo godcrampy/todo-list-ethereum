@@ -19,8 +19,8 @@ These instructions will get you a copy of the project up and running on your loc
 
 1. Clone the repo `$ git clone https://github.com/godcrampy/todo-list-ethereum.git`
 2. Install dependencies
-   - `$ yarn add`
-   - `$ cd client && yarn add`
+   - `$ yarn install`
+   - `$ cd client && yarn install`
 3. Compile smart contracts `$ truffle compile`
 4. Spin up a test blockchain using Ganache or truffle
 5. Deploy smart contract `$ truffle migrate`
