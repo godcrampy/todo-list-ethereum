@@ -24,7 +24,7 @@ class App extends React.Component {
               <div>
                 <div className="flex">
                   <List drizzle={drizzle} drizzleState={drizzleState} />
-                  <img src={img} />
+                  <img src={img} alt="illustration"/>
                 </div>
                 <Control drizzle={drizzle} drizzleState={drizzleState} />
               </div>
